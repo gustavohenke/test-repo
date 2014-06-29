@@ -8,8 +8,9 @@ script:
   - chmod 600 ~/.ssh/id_rsa
   - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   - echo foo > foo.bar
-  - git config --global user.email "gustavo@injoin.com.br"
-  - git config --global user.name "Gustavo Henke"
+  - git config --global user.email "email@example.com"
+  - git config --global user.name "Gustavo Henke bot"
+  - git checkout master
   - git add foo.bar
   - git remote set-url origin git@github.com:gustavohenke/test-repo.git
   - git commit -m "Automated commit"
