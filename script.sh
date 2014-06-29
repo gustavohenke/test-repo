@@ -10,16 +10,19 @@ if [ ! -z "${TRAVIS_TAG}" ]; then
 	chmod 600 ~/.ssh/id_rsa
 	echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
-	GIT_NAME=`git show --format="%an" master | head -n 1`
-	GIT_MAIL=`git show --format="%ae" master | head -n 1`
+	GIT_NAME=`git show --format="%an" | head -n 1`
+	GIT_MAIL=`git show --format="%ae" | head -n 1`
 
 	# Configure git
 	git config user.name "${GIT_NAME}"
 	git config user.email "${GIT_MAIL}"
 
-	git checkout master
+	git fetch origin orphan:orphan
+	git checkout -f orphan
+	git merge master
+
 	echo -e "foo\n" >> foo.bar
 	git commit -am "Automated commit"
 	git remote set-url origin git@github.com:gustavohenke/test-repo.git
-	git push origin master
+	git push origin orphan
 fi
