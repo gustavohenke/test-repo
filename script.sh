@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo $TRAVIS_TAG
+
 if [ ! -z "${TRAVIS_TAG}" ]; then
 	rm -rf ~/.ssh
 	mkdir ~/.ssh
