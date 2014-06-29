@@ -14,6 +14,8 @@ GIT_MAIL=`git show --format="%ae" master | head -n 1`
 git config user.name "${GIT_NAME}"
 git config user.email "${GIT_MAIL}"
 
+git checkout master
 echo foo > foo.bar
 git commit -am "Automated commit"
+git remote set-url origin git@github.com:gustavohenke/test-repo.git
 git push origin master
