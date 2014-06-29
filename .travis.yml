@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - "0.10"
 
-script:
+after_success:
   - chmod +x script.sh
   - ./script.sh
 
