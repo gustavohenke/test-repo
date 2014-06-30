@@ -10,7 +10,7 @@ script:
 
 after_success:
   # Generate zip releases
-  - grunt release
+  #- grunt release
 
   # Submit coverage data to coveralls
   #- grunt -f coveralls:core
@@ -28,7 +28,6 @@ notifications:
 
 env:
   global:
-    # bower_id_rsa_{00..30}
     - secure: J8pVBNRW3Of2doHEfw2tCcls6IozbBtSq1Yr6akoO27m+oEcNatZm7AC3cO9YdcI409e9wPLaA9b/N8ufTdWhr9hbzKnCybXh0OMjVn49IB7rxRmmmqb7tGJ1gLAfT10xPCLZveab0cVMgDbQZlvzFshbDp0DhiHiHPK7sHFntg=
     - secure: nuAhS5I2TP1a8Ve8wyoyye53c85WuZ3cIhZGoPNvqSrOz1ERUixXX+gC/TRl0cBYthu5+TOf+M+/R2n+R8WEb6UJ2iYyEf3VTUwLuPr5AniovWV28Gy1CLkcK7jr2ME9AyNM6VpZEQ6FZfnQMBUYfFUUNaZYlZqOBk9K4WMUOfI=
     - secure: Ltwri0/SZuW5QS+VTxCj9+pSsmRTt3UWWdCh4/PMiMTsLkVeQ9836DnTJ8Msm12EIHhAJ7FUqU+U9D9BDnZEEDTCAM3vbUgJozuRzzCgxHZmoT+nJFNsyV3nXHuOuHi7xhQbtOWCTYH8EdC4KxkatX2auNkar285fz/bSGQVoNk=

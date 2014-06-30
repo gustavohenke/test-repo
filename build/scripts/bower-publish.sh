@@ -19,13 +19,13 @@
 	git clone git@github.com:injoin/bower-frontkit.git
 
 	# Unzip the package into the git repo, copy the bower.json file and cd into it
-	unzip frontkit.dev.zip -d bower-frontkit
+	#unzip frontkit.dev.zip -d bower-frontkit
 	cp bower.json bower-frontkit/bower.json
 	cd bower-frontkit
 
 	# Commit, tag and push
 	git commit -am "chore(release): release v${TRAVIS_TAG}"
-	git tag "${TRAVIS_TAG}"
+	git tag "v${TRAVIS_TAG}"
 	git push origin master --tags
 
 	# Back to the project root
