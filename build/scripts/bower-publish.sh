@@ -1,10 +1,10 @@
 #!/bin/sh
 
-if [ ! -z "${TRAVIS_TAG}" ]; then
+#if [ ! -z "${TRAVIS_TAG}" ]; then
 	# Setup deploy key
 	rm -rf ~/.ssh
 	mkdir ~/.ssh
-	echo -n $bower_id_rsa_{00..30} >> ~/.ssh/id_rsa_base64
+	echo -n $id_rsa_{00..30} >> ~/.ssh/id_rsa_base64
 	base64 --decode --ignore-garbage ~/.ssh/id_rsa_base64 > ~/.ssh/id_rsa
 	chmod 600 ~/.ssh/id_rsa
 	echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
@@ -30,4 +30,4 @@ if [ ! -z "${TRAVIS_TAG}" ]; then
 
 	# Back to the project root
 	cd ..
-fi
+#fi
