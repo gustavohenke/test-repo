@@ -1,6 +1,0 @@
-/*!
- * <%= package.name %> v<%= package.version %>
- * <%= package.description %>
- *
- * <%= package.homepage %>
- */

@@ -1,6 +1,0 @@
-docs:
-  options:
-    hostname: "*"
-    port: 8000
-    livereload: "<%= liveReload %>"
-    keepalive: true

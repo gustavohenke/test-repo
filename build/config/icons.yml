@@ -1,5 +1,0 @@
-docs:
-  options:
-    categories: src/meta/icons.yml
-  src: src/styles/icons.less
-  dest: assets/meta/icons-list.json
