@@ -1,0 +1,17 @@
+# IDE stuff
+.idea/
+*.iml
+
+# Generated files
+/*.html
+/docs/*
+dist/
+test/coverage/
+*.log
+assets/meta/*.json
+assets/styles/*.css
+src/templates/**/*.js
+
+# Dependencies
+node_modules/
+libs/

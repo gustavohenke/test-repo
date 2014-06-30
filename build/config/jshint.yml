@@ -1,0 +1,16 @@
+options:
+    jshintrc: true
+
+core:
+  src:
+    - src/scripts/*.js
+    - assets/scripts/*.js
+    - Gruntfile.js
+
+chore:
+  src:
+    - build/**/*.js
+
+tests:
+  src:
+    - test/unit/**/*.js

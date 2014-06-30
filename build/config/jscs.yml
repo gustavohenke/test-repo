@@ -1,0 +1,14 @@
+options:
+  config: true
+
+core:
+  src:
+    - "<%= jshint.core.src %>"
+
+chore:
+  src:
+    - "<%= jshint.chore.src %>"
+
+tests:
+  src:
+    - "<%= jshint.tests.src %>"

@@ -1,0 +1,61 @@
+options:
+  spawn: false
+  livereload: "<%= liveReload %>"
+
+# Core stuff
+# ----------
+styles:
+  files:
+    - "libs/**/*.css"
+    - "src/styles/*.less"
+  tasks: css
+
+scripts:
+  files:
+    - "src/scripts/*.js"
+  tasks:
+    - jshint:core
+    - jscs:core
+    - js
+
+templates:
+  files:
+    - "src/templates/**/*.html"
+  tasks:
+    - js-tmpl
+    - concat:banner-js
+
+fonts:
+  files:
+    - "src/fonts/*"
+  tasks: fonts
+
+unit:
+  files:
+    - "test/unit/**/*"
+  tasks:
+    - jshint:tests
+    - jscs:tests
+    - karma:dev:run
+
+# Docs stuff
+# ----------
+docsHTML:
+  files:
+    - "src/docs/**/*.swig"
+    - "<%= icons.docs.src %>"
+    - "<%= icons.docs.options.categories %>"
+    - "build/*.json"
+  tasks:
+    - icons:docs
+    - swig:docs
+
+docsJS:
+  files:
+    - "assets/scripts/*.js"
+
+docsCSS:
+  files:
+    - "assets/**/*.less"
+    - "<%= watch.styles.files %>"
+  tasks: less:docs

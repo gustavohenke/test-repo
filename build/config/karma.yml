@@ -1,0 +1,9 @@
+options:
+  configFile: test/unit/karma.conf.js
+
+core:
+  singleRun: true
+
+dev:
+  singleRun: false
+  background: true
