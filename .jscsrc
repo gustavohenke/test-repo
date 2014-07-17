@@ -1,0 +1,5 @@
+{
+  "additionalRules": ["node_modules/jscs-trailing-comma/rules/*.js"],
+
+  "requireTrailingComma": true
+}
