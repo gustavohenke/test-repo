@@ -1,11 +1,10 @@
 language: node_js
 node_js:
-  - 0.10
+  - 7
   
 sudo: false
 install:
-  - npm install -g bower
-  - bower install angular
-  
+  - npm install -g concurrently
+
 script:
-  - echo "foo"
+  - concurrently "echo hello" "echo world"
