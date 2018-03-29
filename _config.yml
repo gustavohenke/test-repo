@@ -3,6 +3,14 @@ description: express-validator
 url: https://ctavan.github.io/express-validator
 permalink: pretty
 
+collections:
+    documentation:
+        title: Documentation
+        position: 1
+    features:
+        title: Features
+        position: 2
+
 languages:
     javascript: JavaScript
     typescript: TypeScript
