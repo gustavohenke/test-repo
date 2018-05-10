@@ -1,6 +1,7 @@
 # Aviator
 
-THAT'S JUST A TEST Yooo
+API documentation template for Jekyll. Browse through a [live demo](https://tangerine-lemon.cloudvent.net/). Start documenting your API with this configurable theme.
+
 ![Aviator template screenshot](.gitbook/assets/_screenshot.png)
 
 Aviator was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
