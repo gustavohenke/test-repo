@@ -1,16 +1,21 @@
 ---
-title: 
-position:
+title: null
+position: null
 parameters:
-  - name:
-    content:
-content_markdown:
+  - name: null
+    content: null
+content_markdown: null
 left_code_blocks:
-  - code_block:
-    title:
-    language:
+  - code_block: null
+    title: null
+    language: null
 right_code_blocks:
-  - code_block:
-    title:
-    language:
+  - code_block: null
+    title: null
+    language: null
 ---
+
+# \_defaults
+
+
+

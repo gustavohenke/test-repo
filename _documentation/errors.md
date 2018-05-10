@@ -2,8 +2,8 @@
 title: Errors
 position: 3
 parameters:
-  - name:
-    content:
+  - name: null
+    content: null
 content_markdown: |-
   | Code | Name | Description |
   | --- | --- | --- |
@@ -22,7 +22,12 @@ left_code_blocks:
     title: Response
     language: json
 right_code_blocks:
-  - code_block:
-    title:
-    language:
+  - code_block: null
+    title: null
+    language: null
 ---
+
+# errors
+
+
+

@@ -1,9 +1,8 @@
 # Aviator
 
-API documentation template for Jekyll. Browse through a [live demo](https://tangerine-lemon.cloudvent.net/).
-Start documenting your API with this configurable theme.
+API documentation template for Jekyll. Browse through a [live demo](https://tangerine-lemon.cloudvent.net/). Start documenting your API with this configurable theme.
 
-![Aviator template screenshot](images/_screenshot.png)
+![Aviator template screenshot](.gitbook/assets/_screenshot.png)
 
 Aviator was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
 
@@ -23,7 +22,7 @@ Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Ac
 ## Setup
 
 1. Add your site and author details in `_config.yml`.
-2. Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/) or Jekyll locally).
+2. Get a workflow going to see your site's output \(with [CloudCannon](https://app.cloudcannon.com/) or Jekyll locally\).
 
 ## Develop
 
@@ -31,15 +30,15 @@ Aviator was built with [Jekyll](http://jekyllrb.com/) version 3.7.2, but should 
 
 Install the dependencies with [Bundler](http://bundler.io/):
 
-~~~bash
+```bash
 $ bundle install
-~~~
+```
 
 Run `jekyll` commands through Bundler to ensure you're using the right versions:
 
-~~~bash
+```bash
 $ bundle exec jekyll serve
-~~~
+```
 
 ## Editing
 
@@ -54,3 +53,4 @@ Aviator is already optimised for adding, updating and removing documentation pag
 ### Search
 
 * Add `excluded_in_search: true` to any documentation page's front matter to exclude that page in the search results.
+
