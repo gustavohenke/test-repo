@@ -1,8 +1,0 @@
-{
-    "plugins": [ "versions@2.1.4" ],
-    "pluginsConfig": {
-        "versions": {
-            "type": "tags"
-        }
-    }
-}
