@@ -1,0 +1,6 @@
+sudo: false
+language: node_js
+install:
+  - echo "no install, move along"
+script:
+  - echo $TRAVIS_NODE_VERSION
