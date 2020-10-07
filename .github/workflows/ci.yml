@@ -19,3 +19,5 @@ jobs:
           node-version: 12.x
       - name: Say something
         run: echo ${{ github.event_name }}
+      - name: Say something2
+        run: echo ${{ github.event_name }}
