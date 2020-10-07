@@ -20,5 +20,5 @@ jobs:
       - name: Say something
         run: echo ${{ github.event_name }}
       - name: Say something, but not on pull_request
-        if: github.event_name == 'pull_request'
+        if: github.event_name != 'pull_request'
         run: echo ${{ github.event_name }}
