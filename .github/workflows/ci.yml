@@ -19,4 +19,6 @@ jobs:
         if: github.event_name != 'pull_request'
         run: echo ${{ github.event_name }}
       - name: How many commits were pushed
-        run: JSON=${{ toJson(github.event.commits) }} echo $JSON | jq '. | length'
+        env:
+          JSON: ${{ toJson(github.event.commits) }}
+        run: echo $JSON | jq '. | length'
