@@ -14,7 +14,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Nodejs stuff
-        run: cat $(node -v) > test.txt
+        run: echo $(node -v) > test.txt
   dep:
     needs: build
     runs-on: ubuntu-latest
