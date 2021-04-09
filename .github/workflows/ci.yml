@@ -15,7 +15,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Nodejs stuff
         run: echo $(node -v) > /github/home/test.txt
-      - 
   dep:
     needs: build
     runs-on: ubuntu-latest
