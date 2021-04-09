@@ -14,17 +14,11 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Nodejs stuff
-        run: echo $(node -v) > test.txt
-      - name: aa
-        run: pwd
-      - name: bb
-        run: ls -l
+        run: echo $(node -v) > /github/home/test.txt
+      - 
   dep:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - run: pwd
-      - name: list stuff
-        run: ls -l
       - name: print stuff
-        run: cat test.txt
+        run: cat /github/home/test.txt
