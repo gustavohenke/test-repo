@@ -1,0 +1,10 @@
+name: Do something
+description: Does something cryptic.
+runs:
+  using: composite
+  steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+    - name: List repo
+      run: ls -l
+      shell: bash
