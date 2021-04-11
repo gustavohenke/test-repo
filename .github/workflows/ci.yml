@@ -11,13 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[skip-ci]')"
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v2
-      - name: Nodejs stuff
-        run: echo $(node -v) > /github/home/test.txt
-  dep:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: print stuff
-        run: cat /github/home/test.txt
+      - uses: gustavohenke/test-repo@649bed38df4a99ba33f966ec39c82374d19b4838
+      - name: List repo
+        run: ls -l
