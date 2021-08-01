@@ -11,6 +11,23 @@ jobs:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[skip-ci]')"
     steps:
-      - uses: gustavohenke/test-repo@649bed38df4a99ba33f966ec39c82374d19b4838
-      - name: List repo
-        run: ls -l
+      - uses: actions/cache@v2
+        env:
+          cache-name: build
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+      - name: Create some files
+        run: echo foo > bar.txt
+  build-pt2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/cache@v2
+        env:
+          cache-name: build
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+      - run: ls -l .
+      - run: cat bar.txt
+          
