@@ -21,6 +21,7 @@ jobs:
         run: echo foo > bar.txt
   build-pt2:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - uses: actions/cache@v2
         env:
