@@ -11,34 +11,43 @@ jobs:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[skip-ci]')"
     steps:
-      - uses: actions/cache@v2
-        env:
-          cache-name: build
-        with:
-          path: ./*
-          key: ${{ github.sha }}
+      # - uses: actions/cache@v2
+      #  env:
+      #    cache-name: build
+      #  with:
+      #    path: ./*
+      #    key: ${{ github.sha }}
       - name: Create some files
         run: echo foo > bar.txt
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: .
+          retention-days: 3
   build-pt2:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - uses: actions/cache@v2
-        env:
-          cache-name: build
+      # - uses: actions/cache@v2
+      #  env:
+      #    cache-name: build
+      #  with:
+      #    path: ./barz.txt
+      #    key: ${{ github.sha }}
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
         with:
-          path: ./barz.txt
-          key: ${{ github.sha }}
+          name: dist
       - run: ls -l .
-      - run: echo barbar > barz.txt
-  build-pt3:
-    runs-on: ubuntu-latest
-    needs: build-pt2
-    steps:
-      - uses: actions/cache@v2
-        env:
-          cache-name: build
-        with:
-          path: ./*
-          key: ${{ github.sha }}
-      - run: ls -l
+#  build-pt3:
+#    runs-on: ubuntu-latest
+#    needs: build-pt2
+#    steps:
+#      - uses: actions/cache@v2
+#        env:
+#          cache-name: build
+#        with:
+#          path: ./*
+#          key: ${{ github.sha }}
+#      - run: ls -l
