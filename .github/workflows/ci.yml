@@ -10,5 +10,5 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - run: timeout 3
-      - run: timeout 0.5
+      - run: timeout 3 > NUL
+      - run: timeout 0.5 > NUL
