@@ -10,5 +10,6 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - run: ping 127.0.0.1 -n 6 -w 500
-      - run: choice /t 0.5 /d y
+      - run: ping 127.0.0.1 -n 6 -w 500 > NUL
+      - run: waitfor something /t 0.5
+      # - run: choice /t 0.5 /d y
