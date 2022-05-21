@@ -18,4 +18,4 @@ jobs:
     steps:
       - run: echo '::set-output name=FOO::"bla bla bla"'
         id: set-foo
-      - run: echo "The value of FOO is ${{ steps.set-foo.FOO }}"
+      - run: echo "The value of FOO is ${{ steps.set-foo.outputs.FOO }}"
