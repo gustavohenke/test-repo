@@ -16,6 +16,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo '::set-output name=FOO::"bla bla bla"'
+      - run: echo '::set-output name=FOO::bla bla bla'
         id: set-foo
       - run: echo "The value of FOO is ${{ steps.set-foo.outputs.FOO }}"
