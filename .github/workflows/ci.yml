@@ -25,5 +25,5 @@ jobs:
       - uses: actions/setup-node@v3.3.0
         with:
           node-version: 14
-      - run: which corepack && corepack prepare pnpm
-      - run: which pnpm
+      - run: which corepack && corepack prepare pnpm@7.1.9
+      - run: which pnpm && pnpm -v
