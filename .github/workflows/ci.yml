@@ -35,7 +35,7 @@ jobs:
   push-length:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.commits }}
+      - run: echo ${{ github }}
       - run: echo ${{ github.commits.length }}
       - env:
           LENGTH: ${{ github.commits.length }}
