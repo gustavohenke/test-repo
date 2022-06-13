@@ -35,7 +35,7 @@ jobs:
   push-length:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ toJSON(github.event) }}
+      - run: echo "$GITHUB_CONTEXT"
       - env:
           LENGTH: ${{ github.event.commits.length }}
         run: echo $(($LENGTH + 1))
