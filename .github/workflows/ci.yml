@@ -36,4 +36,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo ${{ github.commits.length }}
-      - run: echo ${{ github.commits.length + 1 }}
+      - env:
+          LENGTH: ${{ github.commits.length }}
+        run: echo $(($LENGTH + 1))
