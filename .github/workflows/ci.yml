@@ -37,4 +37,6 @@ jobs:
     steps:
       - env:
           COMMITS: ${{ toJSON(github.event.commits) }}
-        run: echo $(( $(echo "$COMMITS" | jq length) + 1 ))
+        id: clone-depth
+        run: echo "::set-output name=CLONE_DEPTH::$(( $(echo "$COMMITS" | jq length) + 1 ))"
+        
