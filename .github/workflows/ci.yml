@@ -37,4 +37,8 @@ jobs:
     steps:
       - env:
           COMMITS: ${{ toJSON(github.event.commits) }}
-        run: echo $(( $(echo "$COMMITS" | jq length) + 1 ))
+        run: echo "::set-output name=value::$(( $(echo "$COMMITS" | jq length) + 1 ))"
+        id: push-depth
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: ${{ github.event.pull_request.commits || steps.push-depth.outputs.value }}
