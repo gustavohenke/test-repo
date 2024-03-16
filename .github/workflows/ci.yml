@@ -19,19 +19,14 @@ jobs:
 #       - run: echo '::set-output name=FOO::bla bla bla'
 #         id: set-foo
 #       - run: echo "The value of FOO is ${{ steps.set-foo.outputs.FOO }}"
-#   pnpm:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/setup-node@v3.3.0
-#         with:
-#           node-version: 14
-#       - run: which corepack && corepack enable && corepack prepare --activate pnpm@7.1.9
-#       - run: which pnpm && pnpm -v
-#   pnpm2:
-#     runs-on: ubuntu-latest
-#     needs: pnpm
-#     steps:
-#       - run: which pnpm && pnpm -v
+  pnpm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3.3.0
+        with:
+          node-version: 20
+      # - run: which corepack && corepack enable && corepack prepare --activate pnpm@7.1.9
+      - run: which pnpm && pnpm -v
   push-length:
     runs-on: ubuntu-latest
     steps:
